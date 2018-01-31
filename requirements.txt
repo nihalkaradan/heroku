@@ -1,5 +1,6 @@
 click==6.7
 Flask==0.12.2
+Flask-MongoAlchemy==0.7.2
 Flask-Restless==0.17.0
 Flask-SQLAlchemy==2.3.2
 gunicorn==19.7.1
@@ -7,6 +8,8 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 mimerender==0.6.0
+MongoAlchemy==0.19
+pymongo==2.8.1
 python-dateutil==2.6.1
 python-mimeparse==1.6.0
 six==1.11.0
