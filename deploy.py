@@ -26,7 +26,7 @@ class privateb(db.model):
 	reciever_id=db.Column(db.Integer,nullable=False)
 db.create_all()	
 
-
+"""2"""
 
 manager=APIManager(app,flask_sqlalchemy_db=db)
 manager.create_api(users,primary_key='username',methods=['GET','POST','DELETE'])
