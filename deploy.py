@@ -12,7 +12,7 @@ class  users(db.Model):
 	id=db.Column(db.Integer,primary_key=True)
 	username=db.Column(db.String(200),unique=True,nullable=False)
 	password=db.Column(db.String(200),nullable=False)
-"""class publicb(db.model):
+class publicb(db.model):
 	id=db.Column(db.Integer,primary_key=True)
 	title=db.Column(db.String(200),unique=True,nullable=False)
 	message=db.Column(db.String(200),nullable=False)
@@ -23,15 +23,15 @@ class privateb(db.model):
 	title=db.Column(db.String(200),unique=True,nullable=False)
 	message=db.Column(db.String(200),nullable=False)
 	sender_id=db.Column(db.Integer,nullable=False)
-	reciever_id=db.Column(db.Integer,nullable=False)"""
+	reciever_id=db.Column(db.Integer,nullable=False)
 db.create_all()	
 
 
 
 manager=APIManager(app,flask_sqlalchemy_db=db)
 manager.create_api(users,primary_key='username',methods=['GET','POST','DELETE'])
-"""manager.create_api(publicb,primary_key='title',methods=['GET','POST','DELETE'])
-manager.create_api(privateb,primary_key='title',methods=['GET','POST','DELETE'])"""
+manager.create_api(publicb,primary_key='title',methods=['GET','POST','DELETE'])
+manager.create_api(privateb,primary_key='title',methods=['GET','POST','DELETE'])
 
 @app.route('/')
 def index():
